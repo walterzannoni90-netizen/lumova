@@ -1,0 +1,34 @@
+{
+  "name": "lumova",
+  "version": "1.0.0",
+  "description": "LUMOVA - AI-powered web app generator",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "cd backend && npm start",
+    "lint": "cd frontend && npm run lint && cd ../backend && npm run lint",
+    "typecheck": "cd frontend && npm run typecheck && cd ../backend && npm run typecheck"
+  },
+  "keywords": [
+    "ai",
+    "generator",
+    "react",
+    "nodejs",
+    "webapp",
+    "low-code"
+  ],
+  "author": "LUMOVA Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
